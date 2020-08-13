@@ -5,8 +5,19 @@
     <title>Welcome WEB1 - CSS</title>
     <meta charset="utf-8">
     <style>
-        a {
+        a { 
             color : red;
+            text-decoration: none;
+        }
+        h1{
+            font-size: 45px;
+            text-align: center;
+        }
+        #active {
+            color: red;
+        }
+        .saw {
+            color: gray;
         }
     </style>
 
@@ -15,8 +26,8 @@
 <body>
     <h1><a href="index.html">WEB</a></h1>
     <ol>
-        <li><a href="html.html">HTML</a></li>
-        <li><a href="css.html">CSS</a></li>
+        <li><a href="html.html" class="saw">HTML</a></li>
+        <li><a href="css.html" class="saw active">CSS</a></li>
         <li><a href="javascript.html">JavaScript</a></li>
     </ol>
 
