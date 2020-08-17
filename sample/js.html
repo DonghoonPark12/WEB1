@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            document.write('hello world\n');
+        </script>
+        <input type="button" value="hi" onclick= "alert('hi')">
+        <!-- <input type="text" onchange= "alert('changed')" />
+        <input type="text" onkeydown= "alert('key down!')" /> -->
+        
+        <h2>IF-True</h2>
+        <script>
+            document.write("1<br>");
+            if(true){
+                document.write("2<br>");
+            }else{
+                document.write("3<br>");
+            }
+            document.write("4<br><br>");
+        </script>
+
+        <script>
+            var coworkers = ['egoing', 'leeche', 'duru', 'taeho'];
+            var i = 0;
+            while(i < 5){
+                document.write('<li> <a href="http://a.com/ '+coworkers[i]+' ">' + coworkers[i] + '</a></li>');
+                i = i+1;
+            }
+        </script>
+
+        <script>
+            function sum(l, r){
+                document.write(l + r + '<br>');
+            }
+            function sum2(l, r){
+                return l + r;
+            }
+            sum(2, 3);
+            sum(3, 4);
+            document.write('<div style="color : red">' + sum2(10, 2) + '</div><br>');
+            document.write('<div style="font-size: 3rem">' + sum2(10, 2) + '</div><br>');
+        </script>
+
+        <script>
+            var coworkers = {
+                "programmer" : "egoing",
+                "designer" : "leeche"
+            }
+            document.write("programmer : " + coworkers.programmer + "<br>");
+            document.write("designer : " + coworkers.designer + "<br>");
+            coworkers.bookkeeper = "duru";
+            coworkers["data scientist"] = "taeho";
+            document.write("bookkeeper : " + coworkers.bookkeeper + "<br>");
+            document.write("data scientist : " + coworkers["data scientist"] + "<br><br>");
+            
+            for(var key in coworkers){
+                document.write(key + ' : ' + coworkers[key] + '<br>');
+            }
+            document.write('<br>');
+            /*
+                아래와 같은 표현을 가지는 메소드 추가
+                function showAll(){
+
+                }
+
+                var showAll = function(){
+
+                }
+            */
+            coworkers.showAll = function(){
+                for(var key in this){
+                    document.write(key + ' : ' + this[key] + '<br>');
+                }
+            }
+            
+            coworkers.showAll();
+        </script>
+    </body>
+</html>
